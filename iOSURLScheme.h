@@ -21,6 +21,10 @@ App Store 设置 Prefs:root=STORE
 
 //以上收集来自钟颖大神的GitHub  https://github.com/cyanzhong/app-tutorials/blob/master/schemes.md
 
+//打开app系统通知设置页面
+NSString *bundleID = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
+NSString *urlString = [NSString stringWithFormat:@"%@%@",@"prefs:root=NOTIFICATIONS_ID&path=",bundleID];
+
 prefs:root=General&path=About //关于本机
 prefs:root=General&path=ACCESSIBILITY //辅助功能
 prefs:root=AIRPLANE_MODE //飞行模式
